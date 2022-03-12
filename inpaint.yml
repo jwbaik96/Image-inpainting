@@ -1,0 +1,56 @@
+# Directory
+celeba_data_folder_dir: '/media/nainshi/새 볼륨/python/Intern/celebaHQ/'
+place_data_list_txt: '/media/nainshi/새 볼륨/python/Intern/places365/'
+GEN_PARAM_PATH: './Gen_param.pth'
+DIS_PARAM_PATH: './Dis_param.pth'
+
+# Test Data & Mask
+TEST_DATA_FOLDER: '/media/nainshi/Blank/RecurrentV13/dataset/celeba_testset'
+TEST_MASK_FOLDER: '/media/nainshi/Blank/RecurrentV13/mask'
+
+random_ff_setting:
+    img_shape: [256, 256]
+    mv: 5
+    ma: 4.0
+    ml: 40
+    mbw: 40
+# bbox
+img_shape: [256, 256]
+max_mask_number: 10
+max_mask_shape: 150
+min_margin: [0, 0]
+max_delta_hw: [50, 50]
+threshold_low: 50
+threshold_medium: 150
+threshold_high: 200
+
+# decive setting
+use_cuda: True
+device_num: 0
+num_workers: 4
+
+# Training hyper-parameters
+cnum: 48
+learning_rate: 0.0001
+beta1: 0.5
+beta2: 0.9
+check_point: 0
+num_iter: 1000000
+batch_size: 2
+shuffle: True
+drop_last: True
+
+LP_l1_weight: 1.0
+LP_Perceptual_weight: 1.0
+
+refine_l1_weight: 5.0
+HP_l1_weight: 1.0
+Gen_loss_weight: 0.01
+Dis_loss_weight: 1.0
+Freature_loss_weight: 1.0
+Perceptual_loss_weight: 1.0
+Style_loss_weight: 250
+Sobel_loss_weight: 10
+
+print_loss_iter: 100
+save_parameter_iter: 1000
